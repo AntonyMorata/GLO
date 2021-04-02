@@ -1,3 +1,4 @@
+'use strict';
 alert('Hello Vlad');
 let money =10000; 
 let income ; 
