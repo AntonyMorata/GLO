@@ -17,7 +17,7 @@ const money = +prompt('Ваш месячный доход?', '70000'),
 if (isFinite(period)) {
     console.log('Период равен '+ period + ' месяцев');
 } else {
-    console.log('У тебя ничего не получится');
+    console.log('Что то пошло не так');
 }
 console.log('Цель заработать '+ mission + ' рублей');
 console.log('Доход за месяц ' + money + ' рублей');
@@ -37,7 +37,7 @@ if (budgetDay > 1200) {
 } else if (budgetDay < 600 && budgetDay > 0) {
     console.log('К сожалению у вас уровень дохода ниже среднего');
 } else if (budgetDay === 0) {
-    console.log('Вы бомж');
+    console.log('У вас недостаточно средств');
 } else {
     console.log('Что то пошло не так');
 }
