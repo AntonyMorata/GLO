@@ -3,7 +3,7 @@ const bot = confirm('Начать игру');
 if (bot) {
     start();
 } else {
-    alert('Ну и пошел ты');
+    alert('Ну тогда в следуйщий раз');
 }
 function start() {
     const num = Math.floor(Math.random() * (101 - 1) + 1);
