@@ -25,6 +25,7 @@ const income = 'Фриланс',
     },
     getExpensesMonth = function() {
         let sum = 0;
+        let amount;
         for (let i = 0; i < 2; i++) {
             //expenses[i] = prompt('Введите обязательную статью расходов?');
             //sum += +prompt('Во сколько это обойдется?');
@@ -32,12 +33,11 @@ const income = 'Фриланс',
                 expenses[i] = prompt('Введите обязательную статью расходов?'); 
             }
             while (isNumber(expenses[i]));
-            do {
-                console.log('старт ' + sum); 
-                sum += +prompt('Во сколько это обойдется?'); 
-                console.log('конец ' + sum); 
+            do { 
+                amount = +prompt('Во сколько это обойдется?'); 
             }
-            while (!isNumber(sum));
+            while (!isNumber(amount));
+            sum += amount;
         }
         console.log(sum); 
         return sum;
@@ -70,10 +70,8 @@ console.log('Возможные расходы ', addExpenses.toLowerCase().spli
 
 if (isFinite(targetMonth)) {
     console.log('Цель будет достигнута за '+ targetMonth + ' месяцев');
-} else if  (targetMonth <= 0) {
+} else if  (targetMonth <= 0 || !isFinite(targetMonth)) {
     console.log('Цель не будет достигнута');
-} else  {
-    console.log('Что то пошло не так');
 }
 
 if (budgetDay > 1200) {
