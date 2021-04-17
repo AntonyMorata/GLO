@@ -4,16 +4,18 @@ let isNumber = function(n) {
 }; 
 let expenses = []; 
 let money;
-//let start = function() {
+(function start() {
+    do {
+        money = +prompt('Ваш месячный доход?'); 
+    }
+    while (!isNumber(money));
+})();
 //    money = prompt('Ваш месячный доход?');
 //    while (isNumber(money)){
 //        money = prompt('Ваш месячный доход?');
 //    }
 //}
-do {
-    money = +prompt('Ваш месячный доход?'); 
-}
-while (!isNumber(money));
+
 const income = 'Фриланс',
     addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 
     'Топливо, спортзал, парикмахерская'),
